@@ -1,4 +1,3 @@
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -21,7 +20,7 @@ model Cliente {
 model Produto {
   produto_id  Int                @id @default(autoincrement())
   nome        String
-  preco       Float              
+  preco       Float
   descricao   String             @db.VarChar(255)
   qtd_estoque Int
   itens       Item_Pedido[]
@@ -32,7 +31,7 @@ model Pedido {
   pedido_id  Int           @id @default(autoincrement())
   cliente_id Int
   data       DateTime      @default(now())
-  sub_total  Decimal?      
+  sub_total  Decimal?
   cliente    Cliente       @relation(fields: [cliente_id], references: [cliente_id])
   itens      Item_Pedido[]
 }
@@ -43,8 +42,8 @@ model Item_Pedido {
   produto_id      Int
   data_venda      DateTime @default(now())
   quantidade      Int
-  preco_unitario  Float  
-  forma_pagamento String?   
+  preco_unitario  Float
+  forma_pagamento String?
   valor_total     Float?
   pedido          Pedido   @relation(fields: [pedido_id], references: [pedido_id])
   produto         Produto  @relation(fields: [produto_id], references: [produto_id])
@@ -53,7 +52,7 @@ model Item_Pedido {
 model Funcionario {
   funcionario_id Int    @id @default(autoincrement())
   nome           String
-  cargo          String 
+  cargo          String
   telefone       String
 }
 
@@ -73,9 +72,6 @@ enum Tipo {
 
 model Fornecedor {
   fornecedor_id Int    @id @default(autoincrement())
-  nome          String 
-  telefone      String 
+  nome          String
+  telefone      String
 }
-
-
-
