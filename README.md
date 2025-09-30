@@ -19,7 +19,8 @@ npx prisma init --datasource-provider mysql
 ```
 - 4 Crie o arquivo .env na raiz do projeto contendo
 ```js
-DATABASE_URL="mysql://root@localhost:3306/estacionamentoapi?schema=public&timezone=UTC"
+DATABASE_URL="mysql://root@localhost:3306/padaria?schema=public&timezone=UTC"
+SECRET_JWT="meu_segredo_jwt"
 ```
 - 5 Edite o Shema do Prisma no arquivo `prisma/schema.prisma` para definir as tabelas.
 - 6 Crie e edite o arquivo `server.js` somente com o básico por enquanto, e `router.js` para definir as rotas da API.
