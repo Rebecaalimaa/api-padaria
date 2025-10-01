@@ -61,7 +61,7 @@ API Techman
 2. Rode `npm install` para instalar as dependências
 3. Crie um arquivo `.env` com o conteúdo a seguir:
 ```js
-DATABASE_URL="mysql://root@localhost:3306/techman"
+DATABASE_URL="mysql://root@localhost:3306/padaria"
 PORT=4000
 ```
 4. De start no SGBD **MySQL**
