@@ -23,7 +23,7 @@ model Produto {
   preco       Float
   descricao   String             @db.VarChar(255)
   qtd_estoque Int
-  imagem      String?            @db.VarChar(255)  
+  imagem String? @db.VarChar(255)
   itens       Item_Pedido[]
   movimentos  MovimentoEstoque[]
 }
