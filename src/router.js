@@ -61,11 +61,11 @@ routes.post('/login', Login.login);
 routes.get('/login', Login.validaToken);
 
 
-routes.get('/clientes', MiddlewareAuth.validate, Cliente.read);
-routes.get('/clientes/:id', MiddlewareAuth.validate, Cliente.readOne);
+routes.get('/clientes', Cliente.read);
+routes.get('/clientes/:id', Cliente.readOne);
 routes.post('/clientes', Cliente.create);
-routes.patch('/clientes/:id', MiddlewareAuth.validate, Cliente.update);
-routes.delete('/clientes/:id', MiddlewareAuth.validate, Cliente.remove);
+routes.patch('/clientes/:id',  Cliente.update);
+routes.delete('/clientes/:id', Cliente.remove);
 
 routes.get('/produtos', Produto.read);
 routes.post('/produtos', MiddlewareAuth.validate, Produto.create);
