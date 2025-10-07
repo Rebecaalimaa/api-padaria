@@ -57,6 +57,12 @@ routes.get('/', (req, res) => {
   });
 });
 
+app.post('/api/pedidos', authMiddleware, async (req, res) => {
+    const clienteId = req.userId; 
+    const { itens, dadosCliente, dadosEntrega, dadosPagamento } = req.body; 
+});
+
+
 routes.post('/login', Login.login);
 // routes.get('/login', Login.validaToken);
 
