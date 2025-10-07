@@ -57,15 +57,8 @@ routes.get('/', (req, res) => {
   });
 });
 
-app.post('/api/pedidos', authMiddleware, async (req, res) => {
-    const clienteId = req.userId; 
-    const { itens, dadosCliente, dadosEntrega, dadosPagamento } = req.body; 
-});
-
-
 routes.post('/login', Login.login);
-// routes.get('/login', Login.validaToken);
-
+routes.get('/login', Login.validaToken);
 
 routes.get('/clientes', Cliente.read);
 routes.get('/clientes/:id', Cliente.readOne);
@@ -74,9 +67,9 @@ routes.patch('/clientes/:id',  Cliente.update);
 routes.delete('/clientes/:id', Cliente.remove);
 
 routes.get('/produtos', Produto.read);
-routes.post('/produtos',  Produto.create);
-routes.patch('/produtos/:id',  Produto.update);
-routes.delete('/produtos/:id',  Produto.remove);
+routes.post('/produtos', Produto.create);
+routes.patch('/produtos/:id', Produto.update);
+routes.delete('/produtos/:id', Produto.remove);
 
 routes.get('/pedidos',  Pedido.read);
 routes.get('/pedidos/:id',  Pedido.readOne);
