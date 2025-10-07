@@ -58,7 +58,7 @@ routes.get('/', (req, res) => {
 });
 
 routes.post('/login', Login.login);
-routes.get('/login', Login.validaToken);
+// routes.get('/login', Login.validaToken);
 
 
 routes.get('/clientes', Cliente.read);
