@@ -1,6 +1,17 @@
 # API da Padaria
 ![UML DER](./assets/DER%20padaria.png)
 
+# **Integrantes**
+-  [Rebeca Lima](https://github.com/Rebecaalimaa)
+- [Steffany Giovanna](https://github.com/steffanygiovanna)
+- [João Angra](https://github.com/joaoangra)
+- [Thamye Souza](https://github.com/thamyeS)
+- [Pedro Oliveira](https://github.com/Pedrokk52)
+
+## Caminho para acessar nosso WEB e nossa API
+- [Projeto Principal](https://github.com/steffanygiovanna/Projeto-padaria-2025)
+- [WEB da Padaria](https://github.com/joaoangra/Web-Padaria-2025)
+  
 ## Requisitos não funcionais
 - [RN001] Linguagem de programação **JavaScript**;
 - [RN002] Framework **Node.js**;
