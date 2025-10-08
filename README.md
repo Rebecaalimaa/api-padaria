@@ -8,7 +8,7 @@
 - [Thamye Souza](https://github.com/thamyeS)
 - [Pedro Oliveira](https://github.com/Pedrokk52)
 
-## Caminho para acessar nosso WEB e nossa API
+## Caminho para acessar nosso Projeto Principal e nosso site WEB
 - [Projeto Principal](https://github.com/steffanygiovanna/Projeto-padaria-2025)
 - [WEB da Padaria](https://github.com/joaoangra/Web-Padaria-2025)
   
