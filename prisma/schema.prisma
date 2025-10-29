@@ -33,7 +33,7 @@ model Pedido {
   cliente_id Int
   data       DateTime      @default(now())
   sub_total  Decimal?
-  cliente    Cliente       @relation(fields: [cliente_id], references: [cliente_id])
+  cliente    Cliente       @relation(fields: [cliente_id], references: [cliente_id], onDelete: Cascade)
   itens      Item_Pedido[]
 }
 
