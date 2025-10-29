@@ -1,6 +1,17 @@
 # API da Padaria
 ![UML DER](./assets/DER%20padaria.png)
 
+# **Integrantes**
+-  [Rebeca Lima](https://github.com/Rebecaalimaa)
+- [Steffany Giovanna](https://github.com/steffanygiovanna)
+- [João Angra](https://github.com/joaoangra)
+- [Thamye Souza](https://github.com/thamyeS)
+- [Pedro Oliveira](https://github.com/Pedrokk52)
+
+## Caminho para acessar nosso Projeto Principal e nosso site WEB
+- [Projeto Principal](https://github.com/steffanygiovanna/Projeto-padaria-2025)
+- [WEB da Padaria](https://github.com/joaoangra/Web-Padaria-2025)
+  
 ## Requisitos não funcionais
 - [RN001] Linguagem de programação **JavaScript**;
 - [RN002] Framework **Node.js**;
@@ -65,7 +76,7 @@ DATABASE_URL="mysql://root@localhost:3306/padaria"
 PORT=4000
 ```
 4. De start no SGBD **MySQL**
-5. Altere o SGBD no `prosma/schema.prisma` para 'mysql'
+5. Altere o SGBD no `prisma/schema.prisma` para 'mysql'
 ```js
 datasource db {
   provider = "mysql"
@@ -74,3 +85,10 @@ datasource db {
 ```
 6. Rode `npx prisma migrate dev --name init` para criar as tabelas no banco de dados.
 7. Rode `npm run dev` para iniciar o servidor em modo de desenvolvimento.
+8. Para voltar a rodar no vercel é só udar as informações que voce mudou
+```js
+datasource db {
+  provider = "postgresql"
+  url      = env("padaria_DATABASE_URL")
+}
+```
