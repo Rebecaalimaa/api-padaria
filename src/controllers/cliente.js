@@ -42,18 +42,51 @@ const readOne = async (req, res) => {
 }
 
 const update = async (req, res) => {
+    const { senhaAtual, novaSenha, nome, telefone, endereco } = req.body;
+    const id = Number(req.params.id);
+
     try {
-        const cliente = await prisma.cliente.update({
-            where: {
-                cliente_id: Number(req.params.id)
-            },
-            data: req.body
+        // Buscar cliente atual
+        const cliente = await prisma.cliente.findUnique({
+            where: { cliente_id: id },
         });
-        return res.status(202).json(cliente);
+
+        if (!cliente) {
+            return res.status(404).json({ error: 'Cliente não encontrado.' });
+        }
+
+        // --- 🧩 Caso o cliente queira alterar a senha ---
+        if (senhaAtual && novaSenha) {
+            const senhaCorreta = await bcrypt.compare(senhaAtual, cliente.senha);
+            if (!senhaCorreta) {
+                return res.status(400).json({ error: 'Senha atual incorreta.' });
+            }
+
+            const senhaHash = await createHash(novaSenha);
+
+            await prisma.cliente.update({
+                where: { cliente_id: id },
+                data: { senha: senhaHash },
+            });
+
+            return res.json({ message: 'Senha alterada com sucesso!' });
+        }
+
+        const clienteAtualizado = await prisma.cliente.update({
+            where: { cliente_id: id },
+            data: { nome, telefone, endereco },
+        });
+
+        return res.status(202).json(clienteAtualizado);
     } catch (error) {
+        console.error(error);
         return res.status(400).json({ error: error.message });
     }
-}
+};
+
+module.exports = {
+    update,
+};
 
 const remove = async (req, res) => {
     try {
