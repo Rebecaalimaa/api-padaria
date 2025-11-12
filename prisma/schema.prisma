@@ -8,12 +8,13 @@ datasource db {
 }
 
 model Cliente {
-  cliente_id Int      @id @default(autoincrement())
+  cliente_id Int         @id @default(autoincrement())
   nome       String
-  email      String   @unique
+  email      String      @unique
   senha      String
+  tipo       TipoUsuario @default(Comum)
   telefone   String
-  endereco   String?  @db.VarChar(100)
+  endereco   String?     @db.VarChar(100)
   pedidos    Pedido[]
 }
 
@@ -23,7 +24,7 @@ model Produto {
   preco       Float
   descricao   String             @db.VarChar(255)
   qtd_estoque Int
-  imagem String? @db.VarChar(255)
+  imagem      String?            @db.VarChar(255)
   itens       Item_Pedido[]
   movimentos  MovimentoEstoque[]
 }
@@ -50,18 +51,9 @@ model Item_Pedido {
   produto         Produto  @relation(fields: [produto_id], references: [produto_id])
 }
 
-model Funcionario {
-  funcionario_id Int    @id @default(autoincrement())
-  nome           String
-  tipo          Cargo
-  telefone       String
-  email          String @unique
-  senha         String
-}
-
-enum Cargo {
- Administrador
- Comum
+enum TipoUsuario {
+  Admin
+  Comum
 }
 
 model MovimentoEstoque {
@@ -83,4 +75,3 @@ model Fornecedor {
   nome          String
   telefone      String
 }
-

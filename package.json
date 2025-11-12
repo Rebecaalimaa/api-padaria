@@ -4,7 +4,7 @@
   "main": "api/server.js",
   "scripts": {
     "dev": "npx nodemon api/server.js",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma migrate dev --name init && prisma db seed && prisma generate"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,9 @@
     "reset": "^0.1.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
   },
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",

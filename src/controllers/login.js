@@ -44,23 +44,6 @@ const login = async (req, res) => {
     }
 };
 
-const validaToken = (req, res) => {
-    const token = req.headers.authorization?.split(" ")[1];
-
-    if (!token) {
-        return res.status(401).send({ message: "Acesso negado. Nenhum token recebido." });
-    }
-
-    jsonwebtoken.verify(token, process.env.SECRET_JWT, (err, decoded) => {
-        if (err) {
-            return res.status(403).send({ message: "Token inválido ou expirado." });
-        }
-        req.user = decoded;
-        res.status(200).json({ message: req.user });
-    });
-};
-
 module.exports = {
-    login,
-    validaToken
+    login
 };
