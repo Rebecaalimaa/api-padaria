@@ -53,8 +53,15 @@ model Item_Pedido {
 model Funcionario {
   funcionario_id Int    @id @default(autoincrement())
   nome           String
-  cargo          String
+  tipo          Cargo
   telefone       String
+  email          String @unique
+  senha         String
+}
+
+enum Cargo {
+ Administrador
+ Comum
 }
 
 model MovimentoEstoque {
@@ -76,3 +83,4 @@ model Fornecedor {
   nome          String
   telefone      String
 }
+
