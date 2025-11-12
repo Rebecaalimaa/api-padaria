@@ -5,17 +5,16 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("padaria_DATABASE_URL")
-  // url      = env("DATABASE_URL")
 }
 
 model Cliente {
-  cliente_id Int      @id @default(autoincrement())
+  cliente_id Int         @id @default(autoincrement())
   nome       String
-  email      String   @unique
+  email      String      @unique
   senha      String
-  tipo       String   @default("Comum")
+  tipo       TipoUsuario @default(Comum)
   telefone   String
-  endereco   String?  @db.VarChar(100)
+  endereco   String?     @db.VarChar(100)
   pedidos    Pedido[]
 }
 
@@ -55,8 +54,18 @@ model Item_Pedido {
 model MovimentoEstoque {
   estoque_id     Int      @id @default(autoincrement())
   produto_id     Int
-  tipo           String
+  tipo           Tipo
   quantidade     Int
   data_movimento DateTime @default(now())
   produto        Produto  @relation(fields: [produto_id], references: [produto_id])
+}
+
+enum Tipo {
+  Entrada
+  Saida
+}
+
+enum TipoUsuario {
+  Admin
+  Comum
 }
