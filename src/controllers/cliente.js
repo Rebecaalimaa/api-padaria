@@ -1,21 +1,13 @@
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 const bcrypt = require('bcrypt');
-const { createHash } = require('../middlewares/auth'); 
+const { createHash } = require('../middlewares/auth');
 const create = async (req, res) => {
     try {
-        let { nome, email, senha, telefone, endereco} = req.body;
-        const senhaHash = await createHash(senha);
+        req.body.senha = await createHash(req.body.senha);
         const cliente = await prisma.cliente.create({
-            data: {
-                nome,
-                email,
-                senha: senhaHash,
-                telefone,
-                endereco
-            }
+            data: req.body
         });
-
         return res.status(201).json(cliente);
     } catch (error) {
         return res.status(400).json({ error: error.message });

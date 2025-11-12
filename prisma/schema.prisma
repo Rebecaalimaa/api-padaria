@@ -51,11 +51,6 @@ model Item_Pedido {
   produto         Produto  @relation(fields: [produto_id], references: [produto_id])
 }
 
-enum TipoUsuario {
-  Admin
-  Comum
-}
-
 model MovimentoEstoque {
   estoque_id     Int      @id @default(autoincrement())
   produto_id     Int
@@ -70,8 +65,7 @@ enum Tipo {
   Saida
 }
 
-model Fornecedor {
-  fornecedor_id Int    @id @default(autoincrement())
-  nome          String
-  telefone      String
+enum TipoUsuario {
+  Admin
+  Comum
 }
