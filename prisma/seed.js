@@ -82,7 +82,6 @@ async function main() {
     await prisma.produto.createMany({
         data: [
             {
-                "produto_id": 2,
                 "nome": "Pão de Forma Artesanal",
                 "preco": 7,
                 "descricao": "Feito com ingredientes selecionados, perfeito para sanduíches.",
@@ -90,7 +89,6 @@ async function main() {
                 "imagem": "https://amopaocaseiro.com.br/wp-content/uploads/2019/12/pao-de-forma-caseiro_02.jpg"
             },
             {
-                "produto_id": 1,
                 "nome": "Pão Francês",
                 "preco": 0.8,
                 "descricao": "Pão crocante por fora e macio por dentro, ideal para o café da manhã.",
@@ -98,7 +96,6 @@ async function main() {
                 "imagem": "https://http2.mlstatic.com/D_NQ_NP_943531-MLB44632741305_012021-O.webp"
             },
             {
-                "produto_id": 4,
                 "nome": "Pão de Milho",
                 "preco": 7.5,
                 "descricao": "Pão macio com sabor leve de milho, ótimo para lanches.",
@@ -106,7 +103,6 @@ async function main() {
                 "imagem": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRlyHXG96ub2OIaffwR4wkrY7n1Vsah_Vwsbyj7z1qdcoo7b7hZ"
             },
             {
-                "produto_id": 5,
                 "nome": "Pão de Leite",
                 "preco": 6,
                 "descricao": "Pão fofinho e levemente adocicado, ideal para o lanche da tarde.",
@@ -114,7 +110,6 @@ async function main() {
                 "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBSzqOnLVmrwuABVboJ0riLUVd7KIDFQf4hYwFfdradboaXy-s"
             },
             {
-                "produto_id": 7,
                 "nome": "Pão de Alho Assado",
                 "preco": 3.5,
                 "descricao": "Clássico pão de alho assado, crocante e saboroso.",
@@ -122,7 +117,6 @@ async function main() {
                 "imagem": "https://nacozinhareceitas.com.br/wp-content/uploads/2024/09/pc3a3o-de-alho.jpg.webp"
             },
             {
-                "produto_id": 9,
                 "nome": "Enrolado de Salsicha",
                 "preco": 5.5,
                 "descricao": "Salsicha envolta em massa macia, também conhecido como doguinho.",
@@ -130,7 +124,6 @@ async function main() {
                 "imagem": "https://i.pinimg.com/474x/44/b8/d1/44b8d1fe492cf9c03a3da67e4cda7921.jpg"
             },
             {
-                "produto_id": 11,
                 "nome": "Pastel de Forno (Carne ou Frango)",
                 "preco": 6.5,
                 "descricao": "Pastel assado com recheio saboroso de carne ou frango.",
@@ -138,7 +131,6 @@ async function main() {
                 "imagem": "https://i.pinimg.com/736x/15/02/9a/15029a676681611c2889030f39cbc938.jpg"
             },
             {
-                "produto_id": 13,
                 "nome": "Mini Pizza de Calabresa",
                 "preco": 7,
                 "descricao": "Massa macia com molho, queijo e calabresa fatiada.",
@@ -146,7 +138,6 @@ async function main() {
                 "imagem": "https://receitinhasdemae.com.br/wp-content/uploads/2024/12/maxresdefault-5-500x375.jpg"
             },
             {
-                "produto_id": 15,
                 "nome": "Misto Quente Artesanal",
                 "preco": 8,
                 "descricao": "Pão artesanal com presunto e queijo derretido na chapa.",
@@ -154,7 +145,6 @@ async function main() {
                 "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAQD8Z2MICJo9XaB2n_MgXDG1cC8nsawvuSnYqYfkfnVnD5wJt"
             },
             {
-                "produto_id": 17,
                 "nome": "Café Expresso (50ml)",
                 "preco": 4,
                 "descricao": "Café expresso intenso, extraído na hora.",
@@ -162,7 +152,6 @@ async function main() {
                 "imagem": "https://guiadoestudante.abril.com.br/wp-content/uploads/sites/4/2024/06/cafe-expresso-ou-espresso.jpg?quality=70&strip=info&w=414&h=280&crop=1"
             },
             {
-                "produto_id": 19,
                 "nome": "Suco Natural (300ml)",
                 "preco": 5,
                 "descricao": "Suco natural da fruta, sem conservantes.",
@@ -170,7 +159,6 @@ async function main() {
                 "imagem": "https://imagens.ne10.uol.com.br/veiculos/_midias/jpg/2025/05/07/597x330/1_istock_540519504-34404267.jpg"
             },
             {
-                "produto_id": 21,
                 "nome": "Bala Halls",
                 "preco": 2.5,
                 "descricao": "Bala refrescante para hálito puro e fresco.",
@@ -178,7 +166,6 @@ async function main() {
                 "imagem": "https://supermercadocarioca.com.br/wp-content/uploads/2020/04/halls.png"
             },
             {
-                "produto_id": 23,
                 "nome": "Bala de Iogurte",
                 "preco": 0.5,
                 "descricao": "Bala macia com sabor suave de iogurte.",
@@ -186,7 +173,6 @@ async function main() {
                 "imagem": "https://phygital-files.mercafacil.com/catalogo/uploads/produto/bala_recheio_iogurte_de_morango_dori_yogurte100_pacote_100g_0baa27eb-e366-43ab-9141-06faac16ca44.png"
             },
             {
-                "produto_id": 25,
                 "nome": "Tic Tac",
                 "preco": 3,
                 "descricao": "Balas refrescantes em embalagem prática.",
@@ -194,7 +180,6 @@ async function main() {
                 "imagem": "https://gkpb.com.br/wp-content/uploads/2023/06/tic-tac-menta-fresh2-1.jpeg"
             },
             {
-                "produto_id": 31,
                 "nome": "Fatia Hungaras",
                 "preco": 3,
                 "descricao": "Pao doce delicioso com coco e creme",
@@ -202,7 +187,6 @@ async function main() {
                 "imagem": "https://www.receiteria.com.br/wp-content/uploads/fatias-hungaras-veganas.jpg"
             },
             {
-                "produto_id": 6,
                 "nome": "Pão de Calabresa com Queijo",
                 "preco": 9,
                 "descricao": "Pão recheado com calabresa e queijo, sabor marcante e irresistível.",
@@ -210,7 +194,6 @@ async function main() {
                 "imagem": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSjo-EumQC5sVKX_sH-D-xAlpM5pcOG0kbw2yG3_Lg1EuZbXVqt"
             },
             {
-                "produto_id": 26,
                 "nome": "Nutella",
                 "preco": 15,
                 "descricao": "Um creme de avelã delicioso",
@@ -218,7 +201,6 @@ async function main() {
                 "imagem": "https://superprix.vteximg.com.br/arquivos/ids/167916-600-600/Creme-de-Avela-com-Cacau-Nutella-140g.jpg?v=636093975453830000"
             },
             {
-                "produto_id": 27,
                 "nome": "Água Mineral (500ml)",
                 "preco": 3,
                 "descricao": "Se hidrate em todos os momentos",
@@ -226,7 +208,6 @@ async function main() {
                 "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7lEsflcT3jIjbKL0_rvnsaA_pMSOGda-GsQ&s"
             },
             {
-                "produto_id": 18,
                 "nome": "Cappuccino Cremoso (200ml)",
                 "preco": 6,
                 "descricao": "Bebida cremosa com café, leite e chocolate.",
@@ -234,7 +215,6 @@ async function main() {
                 "imagem": "https://http2.mlstatic.com/D_NQ_NP_820087-MLB81012674488_122024-O.webp"
             },
             {
-                "produto_id": 20,
                 "nome": "Chá Quente (200ml)",
                 "preco": 3.5,
                 "descricao": "Chá quente, ideal para relaxar a qualquer hora.",
@@ -242,7 +222,6 @@ async function main() {
                 "imagem": "https://png.pngtree.com/background/20250430/original/pngtree-hot-tea-drink-with-lemon-and-seasonings-picture-image_15562807.jpg"
             },
             {
-                "produto_id": 8,
                 "nome": "Esfirra de Carne",
                 "preco": 6,
                 "descricao": "Esfirra macia e recheada com carne temperada no ponto certo.",
@@ -250,7 +229,6 @@ async function main() {
                 "imagem": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSXRAvDP1iKVsUt2wxouZZsZpSa9-OcsVPUQiFYeBWpXLO1OgTF"
             },
             {
-                "produto_id": 22,
                 "nome": "Trident",
                 "preco": 2.5,
                 "descricao": "Goma de mascar com sabores variados e refrescantes.",
@@ -258,7 +236,6 @@ async function main() {
                 "imagem": "https://down-br.img.susercontent.com/file/sg-11134201-7rceb-lt55l0h4mz1ddb"
             },
             {
-                "produto_id": 24,
                 "nome": "Mentos",
                 "preco": 3,
                 "descricao": "Pastilha mastigável com sabores frutados ou menta.",
@@ -266,7 +243,6 @@ async function main() {
                 "imagem": "https://samsclub.vtexassets.com/arquivos/ids/214065/7896262304467_1.jpg?v=638894740749470000"
             },
             {
-                "produto_id": 16,
                 "nome": "Café (200ml)",
                 "preco": 3,
                 "descricao": "Café coado tradicional, quente e encorpado.",
@@ -274,7 +250,6 @@ async function main() {
                 "imagem": "https://newr7-r7-prod.web.arc-cdn.net/resizer/v2/BCCT2IECNVFLJIIKA5MNCIWUMI.jpeg?auth=30fde307e2725ce5773028e57824191dc3f834c4db12c9e73c59a3f38b744dee&width=1280&height=720"
             },
             {
-                "produto_id": 12,
                 "nome": "Empada de Frango",
                 "preco": 5,
                 "descricao": "Empada tradicional recheada com frango desfiado e temperado.",
@@ -282,7 +257,6 @@ async function main() {
                 "imagem": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/17493753906845599e91cf4_75_75.jpeg"
             },
             {
-                "produto_id": 35,
                 "nome": "Coxinha de Morango",
                 "preco": 10.5,
                 "descricao": "Uma explosão de sabores, sendo macia por fora e azedinha por dentro",
@@ -290,7 +264,6 @@ async function main() {
                 "imagem": "https://receitadelicia.com.br/wordpress/wp-content/files/receitadelicia.com.br/2024/07/coxinha-de-morango-delicia-inusitada-de-inovar-o-paladar-1.webp"
             },
             {
-                "produto_id": 36,
                 "nome": "Pão de Queijo",
                 "preco": 4.5,
                 "descricao": "Crocante por fora e macio por dentro, muito bom para tomar com um cafézinho.",
@@ -298,7 +271,6 @@ async function main() {
                 "imagem": "https://cdn.casaeculinaria.com/wp-content/uploads/2023/01/26110706/Pao-de-queijo-1.webp"
             },
             {
-                "produto_id": 14,
                 "nome": "Torta Salgada de Frango",
                 "preco": 6.5,
                 "descricao": "Fatia de torta caseira recheada com frango cremoso.",
@@ -306,7 +278,6 @@ async function main() {
                 "imagem": "https://blog.gsuplementos.com.br/wp-content/uploads/2022/10/torta-de-frango-fit.jpg"
             },
             {
-                "produto_id": 37,
                 "nome": "Chá Gelado (300ml)",
                 "preco": 17,
                 "descricao": "Refrescante",
@@ -314,7 +285,6 @@ async function main() {
                 "imagem": "https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2023/10/30/759785217-cha-gelado-simples.jpg"
             },
             {
-                "produto_id": 34,
                 "nome": "Achocolatado\n",
                 "preco": 4,
                 "descricao": "(Nescau,Toddy)",
@@ -326,96 +296,22 @@ async function main() {
 
     await prisma.pedido.createMany({
         data: [
-            {
-                "pedido_id": 2,
-                "cliente_id": 4,
-                "data": "2025-10-07T16:38:06.953Z",
-                "sub_total": null
-            },
-            {
-                "pedido_id": 4,
-                "cliente_id": 2,
-                "data": "2025-10-08T17:31:54.873Z",
-                "sub_total": "39"
-            },
-            {
-                "pedido_id": 5,
-                "cliente_id": 2,
-                "data": "2025-10-08T17:34:26.990Z",
-                "sub_total": "24.5"
-            },
-            {
-                "pedido_id": 6,
-                "cliente_id": 4,
-                "data": "2025-10-08T17:38:50.074Z",
-                "sub_total": "15.5"
-            },
-            {
-                "pedido_id": 7,
-                "cliente_id": 25,
-                "data": "2025-10-08T20:01:56.057Z",
-                "sub_total": "6.8"
-            },
-            {
-                "pedido_id": 8,
-                "cliente_id": 13,
-                "data": "2025-10-08T20:09:00.228Z",
-                "sub_total": "0.8"
-            },
-            {
-                "pedido_id": 9,
-                "cliente_id": 13,
-                "data": "2025-10-08T20:08:58.515Z",
-                "sub_total": "0.8"
-            },
-            {
-                "pedido_id": 10,
-                "cliente_id": 13,
-                "data": "2025-10-08T20:09:00.812Z",
-                "sub_total": "0.8"
-            },
-            {
-                "pedido_id": 11,
-                "cliente_id": 13,
-                "data": "2025-10-08T20:09:00.603Z",
-                "sub_total": "0.8"
-            },
-            {
-                "pedido_id": 12,
-                "cliente_id": 13,
-                "data": "2025-10-08T20:09:01.603Z",
-                "sub_total": "0.8"
-            },
-            {
-                "pedido_id": 13,
-                "cliente_id": 13,
-                "data": "2025-10-08T20:09:01.187Z",
-                "sub_total": "0.8"
-            },
-            {
-                "pedido_id": 14,
-                "cliente_id": 13,
-                "data": "2025-10-08T20:09:01.771Z",
-                "sub_total": "0.8"
-            },
-            {
-                "pedido_id": 15,
-                "cliente_id": 29,
-                "data": "2025-10-28T11:34:30.930Z",
-                "sub_total": "6"
-            },
-            {
-                "pedido_id": 16,
-                "cliente_id": 2,
-                "data": "2025-11-05T17:41:44.638Z",
-                "sub_total": "13.3"
-            },
-            {
-                "pedido_id": 17,
-                "cliente_id": 2,
-                "data": "2025-11-11T18:52:05.710Z",
-                "sub_total": "6.5"
-            }
+            { "cliente_id": 1 },
+            { "cliente_id": 1 },
+            { "cliente_id": 2 },
+            { "cliente_id": 4 },
+            { "cliente_id": 2 },
+            { "cliente_id": 3 },
+            { "cliente_id": 10 },
+            { "cliente_id": 1 },
+            { "cliente_id": 2 },
+            { "cliente_id": 3 },
+            { "cliente_id": 4 },
+            { "cliente_id": 5 },
+            { "cliente_id": 6 },
+            { "cliente_id": 7 },
+            { "cliente_id": 8 },
+            { "cliente_id": 9 }
         ],
     })
 
